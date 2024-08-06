@@ -4,11 +4,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    font: 'Roboto', sans-serif;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 3fr;
     grid-template-areas:
         "sidebar header"
@@ -18,6 +28,50 @@
 .sidebar {
     background-color: #1992D4;
     grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 3fr;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+    font-weight: bold;
+    gap: 85px;
+}
+
+.sidebar-header {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+}
+
+.sidebar li{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar svg {
+    fill: white;
+}
+
+.sidebar-header svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+.sidebar span {
+    margin: 0px;
 }
 
 .header {
@@ -26,10 +80,4 @@
 
 .main-content {
     grid-area: main;
-}
-
-svg {
-    width: 24px;
-    height: 24px;
-    background-color: inherit;
 }
